@@ -11,7 +11,7 @@ import java.awt.*;
 @Setter
 public class Building {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "building_id", nullable = false)
     private int id;
 
