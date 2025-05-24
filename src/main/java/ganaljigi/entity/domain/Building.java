@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -13,7 +15,7 @@ public class Building {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "building_id", nullable = false)
-    private int id;
+    private Long id;
 
     @Column(nullable = false)
     private Point spot; // 위치
@@ -23,4 +25,10 @@ public class Building {
 
     private int number; // 건물번호
     private String department; // 소속부서
+
+    @OneToMany(mappedBy = "building")
+    private List<Door> doors = new ArrayList();
+
+    @OneToMany(mappedBy = "building")
+    private List<Room> rooms = new ArrayList();
 }
