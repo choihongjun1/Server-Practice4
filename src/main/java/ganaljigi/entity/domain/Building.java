@@ -31,4 +31,7 @@ public class Building {
 
     @OneToMany(mappedBy = "building")
     private List<Room> rooms = new ArrayList<>();
+
+    @OneToMany(mappedBy = "building")
+    private List<Significant> significant = new ArrayList<>();
 }
