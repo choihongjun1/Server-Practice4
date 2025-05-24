@@ -7,16 +7,14 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Image {
+public class RoomImage {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "image_id", nullable = false)
+    @Column(name = "room_image_id", nullable = false)
     private Long id;
 
-    @Column(nullable = false)
     private String url; // 이미지 url
 
-    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private ImageType type; // 이미지 타입
 

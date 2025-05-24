@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -53,4 +56,7 @@ public class Room {
     @OneToOne
     @JoinColumn(name = "room_info_id")
     private RoomInfo roomInfo;
+
+    @OneToMany(mappedBy = "room")
+    private List<RoomImage> images = new ArrayList<>();
 }

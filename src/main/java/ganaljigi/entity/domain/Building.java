@@ -27,8 +27,8 @@ public class Building {
     private String department; // 소속부서
 
     @OneToMany(mappedBy = "building")
-    private List<Door> doors = new ArrayList();
+    private List<Door> doors = new ArrayList<>();
 
     @OneToMany(mappedBy = "building")
-    private List<Room> rooms = new ArrayList();
+    private List<Room> rooms = new ArrayList<>();
 }
