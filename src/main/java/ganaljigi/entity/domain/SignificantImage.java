@@ -15,7 +15,7 @@ public class SignificantImage {
 
     private String url; // 사진 url
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "significant_id", nullable = false)
     private Significant significant;
 }

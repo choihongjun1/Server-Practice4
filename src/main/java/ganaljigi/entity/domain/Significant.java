@@ -18,7 +18,7 @@ public class Significant {
 
     private String description; // 설명
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "building_id", nullable = false)
     private Building building;
 

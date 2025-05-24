@@ -49,11 +49,11 @@ public class Room {
 
     private String comment; // 특이사항
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "building_id", nullable = false)
     private Building building;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_info_id")
     private RoomInfo roomInfo;
 

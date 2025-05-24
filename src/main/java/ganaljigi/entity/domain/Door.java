@@ -26,7 +26,7 @@ public class Door {
 
     private String significant; // 특이사항
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "building_id", nullable = false)
     private Building building;
 }

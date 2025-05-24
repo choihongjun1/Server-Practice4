@@ -18,7 +18,7 @@ public class RoomImage {
     @Enumerated(EnumType.STRING)
     private ImageType type; // 이미지 타입
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id", nullable = false)
     private Room room;
 }
