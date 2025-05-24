@@ -7,15 +7,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class SignificantImage {
+public class OutsideSignificantImage {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "significant_image_id", nullable = false)
+    @Column(name = "outside_significant_image_id", nullable = false)
     private Long id;
 
     private String url; // 사진 url
 
     @ManyToOne
-    @JoinColumn(name = "significant_id", nullable = false)
-    private Significant significant;
+    @JoinColumn(name = "outside_significant_id", nullable = false)
+    private OutsideSignificant significant;
 }

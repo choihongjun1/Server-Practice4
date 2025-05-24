@@ -11,7 +11,7 @@ import java.awt.*;
 @Setter
 public class Obstacle {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "obstacle_id", nullable = false)
     private Long id;
 

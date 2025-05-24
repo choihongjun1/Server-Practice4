@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.awt.*;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @Getter
@@ -20,4 +22,7 @@ public class OutsideSignificant {
 
     @Column(nullable = false)
     private String description; // 설명
+
+    @OneToMany(mappedBy = "significant")
+    private List<OutsideSignificantImage> images = new ArrayList<>();
 }

@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 public class Significant {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "significant_id", nullable = false)
     private Long id;
 
