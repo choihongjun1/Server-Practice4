@@ -49,4 +49,8 @@ public class Room {
     @ManyToOne
     @JoinColumn(name = "building_id", nullable = false)
     private Building building;
+
+    @OneToOne
+    @JoinColumn(name = "room_info_id")
+    private RoomInfo roomInfo;
 }

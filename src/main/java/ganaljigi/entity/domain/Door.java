@@ -22,7 +22,7 @@ public class Door {
     private String image; // 사진
 
     @Column(nullable = false)
-    private boolean wheelChair; // 휠체어 진입 가능 여부
+    private boolean wheelchair; // 휠체어 진입 가능 여부
 
     private String significant; // 특이사항
 
