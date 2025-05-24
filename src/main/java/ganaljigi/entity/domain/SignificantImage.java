@@ -10,7 +10,7 @@ import lombok.Setter;
 public class SignificantImage {
 
     @Id @GeneratedValue
-    @Column(name = "significant_image_id")
+    @Column(name = "significant_image_id", nullable = false)
     private Long id;
 
     private String url; // 사진 url
