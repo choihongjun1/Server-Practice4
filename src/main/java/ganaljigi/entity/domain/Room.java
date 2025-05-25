@@ -57,6 +57,6 @@ public class Room {
     @JoinColumn(name = "room_info_id")
     private RoomInfo roomInfo;
 
-    @OneToMany(mappedBy = "room")
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<RoomImage> images = new ArrayList<>();
 }

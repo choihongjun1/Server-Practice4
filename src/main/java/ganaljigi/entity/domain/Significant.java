@@ -22,6 +22,6 @@ public class Significant {
     @JoinColumn(name = "building_id", nullable = false)
     private Building building;
 
-    @OneToMany(mappedBy = "significant")
+    @OneToMany(mappedBy = "significant", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SignificantImage> images = new ArrayList<>();
 }

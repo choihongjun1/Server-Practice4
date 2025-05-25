@@ -23,6 +23,9 @@ public class Building {
     @Column(nullable = false)
     private String name; // 건물이름
 
+    @Column(nullable = false)
+    private String image; // 건물사진
+
     private int number; // 건물번호
     private String department; // 소속부서
 

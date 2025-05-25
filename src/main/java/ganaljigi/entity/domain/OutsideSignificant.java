@@ -23,6 +23,6 @@ public class OutsideSignificant {
     @Column(nullable = false)
     private String description; // 설명
 
-    @OneToMany(mappedBy = "significant")
+    @OneToMany(mappedBy = "significant", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OutsideSignificantImage> images = new ArrayList<>();
 }

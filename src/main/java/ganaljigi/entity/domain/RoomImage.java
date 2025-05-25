@@ -13,6 +13,7 @@ public class RoomImage {
     @Column(name = "room_image_id", nullable = false)
     private Long id;
 
+    @Column(nullable = false)
     private String url; // 이미지 url
 
     @Enumerated(EnumType.STRING)

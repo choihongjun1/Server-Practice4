@@ -13,6 +13,7 @@ public class OutsideSignificantImage {
     @Column(name = "outside_significant_image_id", nullable = false)
     private Long id;
 
+    @Column(nullable = false)
     private String url; // 사진 url
 
     @ManyToOne(fetch = FetchType.LAZY)
