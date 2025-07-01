@@ -11,5 +11,6 @@ public enum FacilitiesType {
     CONVENIENCE,
     KCUBE,
     KHUB,
-    LOUNGE
+    LOUNGE,
+    PARKINGLOT
 }

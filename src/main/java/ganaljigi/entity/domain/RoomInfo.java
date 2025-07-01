@@ -29,7 +29,7 @@ public class RoomInfo {
     private boolean multiSeat; // 다인용
 
     @Column(nullable = false)
-    private boolean sneezeGuard; // 다리 가리개
+    private boolean panel; // 다리 가리개
 
     @Column(nullable = false)
     private boolean backOfChair; // 등받이
