@@ -40,4 +40,7 @@ public class Building {
 
     @OneToMany(mappedBy = "building")
     private List<Facilities> facilities = new ArrayList<>();
+
+    @OneToMany(mappedBy = "building")
+    private List<FloorPlan> floorPlans = new ArrayList<>();
 }
